@@ -8,7 +8,7 @@ import Result from "./components/Result";
 
 export default function App(){
     const {started,finished}=useQuestion();
-    return <div className=" bg-gray-800 h-[100dvh] text-white">
+    return <div className=" bg-gray-800 pb-10 min-h-[100dvh] text-white">
     <Logo/>
     <main className="w-fit mx-auto">
     {!started&&!finished && <Landing />}

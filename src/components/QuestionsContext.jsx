@@ -6,7 +6,8 @@ const context = createContext();
 function reducer(state,action){
     switch(action.type) {
         case "start" : return {...state,started : true}
-        case "next" : return {...state,questionNum:state.questionNum+1}
+        case "next" : return {...state,questionNum:state.questionNum+1,answered : false}
+        case "answer" : return {...state,points:state.points+action.payload}
         case "finished" : return {...state,finished : true} 
         default : return state;
     }
